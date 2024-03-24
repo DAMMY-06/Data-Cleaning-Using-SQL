@@ -15,7 +15,7 @@ Add SalesDateConverted Date;
 Update [Nashville Housing Data for Data Cleaning]
 SET SalesDateConverted = CONVERT(Date,SaleDate)
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Populate Property Address data
 Select *
 From [Nashville Housing Data for Data Cleaning]
@@ -39,6 +39,7 @@ ON a.ParcelID = b.ParcelID
 Where a.PropertyAddress is null
 
 --------------------------------------------------------------------------------------------------------------------------
+
 -- Breaking out Address into Individual Columns (Address, City, State)
 
 Select PropertyAddress
@@ -95,6 +96,7 @@ SET OwnwerSplitState = PARSENAME(REPLACE(OwnerAddress,',' , '.') , 2)
 
 SELECT*
 From [Nashville Housing Data for Data Cleaning]
+
 
 --------------------------------------------------------------------------------------------------------------------------
 -- Remove Duplicates
